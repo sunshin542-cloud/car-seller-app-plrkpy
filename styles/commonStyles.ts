@@ -1,26 +1,47 @@
+
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
 
 export const colors = {
-  primary: '#162456',    // Material Blue
-  secondary: '#193cb8',  // Darker Blue
-  accent: '#64B5F6',     // Light Blue
-  background: '#101824',  // Keeping dark background
-  backgroundAlt: '#162133',  // Keeping dark background
-  text: '#e3e3e3',       // Keeping light text
-  grey: '#90CAF9',       // Light Blue Grey
-  card: '#193cb8',       // Keeping dark card background
+  primary: '#2563EB',      // Blue
+  secondary: '#1E40AF',    // Darker Blue
+  accent: '#3B82F6',       // Light Blue
+  background: '#FFFFFF',   // White background
+  backgroundAlt: '#F8FAFC', // Light gray
+  text: '#1F2937',         // Dark gray text
+  textSecondary: '#6B7280', // Medium gray text
+  grey: '#E5E7EB',         // Light gray
+  card: '#FFFFFF',         // White cards
+  success: '#10B981',      // Green
+  warning: '#F59E0B',      // Orange
+  error: '#EF4444',        // Red
+  border: '#E5E7EB',       // Border color
 };
 
 export const buttonStyles = StyleSheet.create({
-  instructionsButton: {
+  primary: {
     backgroundColor: colors.primary,
-    alignSelf: 'center',
-    width: '100%',
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: 'center',
   },
-  backButton: {
+  secondary: {
     backgroundColor: colors.backgroundAlt,
-    alignSelf: 'center',
-    width: '100%',
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  outline: {
+    backgroundColor: 'transparent',
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: colors.primary,
   },
 });
 
@@ -35,55 +56,84 @@ export const commonStyles = StyleSheet.create({
     backgroundColor: colors.background,
     width: '100%',
     height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   content: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    maxWidth: 800,
-    width: '100%',
+    paddingHorizontal: 20,
+    paddingTop: 20,
   },
   title: {
-    fontSize: 24,
-    fontWeight: '800',
-    textAlign: 'center',
+    fontSize: 28,
+    fontWeight: '700',
     color: colors.text,
-    marginBottom: 10
+    marginBottom: 8,
+  },
+  subtitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: colors.text,
+    marginBottom: 16,
   },
   text: {
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: '400',
     color: colors.text,
-    marginBottom: 8,
     lineHeight: 24,
-    textAlign: 'center',
+  },
+  textSecondary: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: colors.textSecondary,
+    lineHeight: 20,
   },
   section: {
-    width: '100%',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-  },
-  buttonContainer: {
-    width: '100%',
-    alignItems: 'center',
-    paddingHorizontal: 20,
+    marginBottom: 24,
   },
   card: {
-    backgroundColor: colors.backgroundAlt,
-    borderColor: colors.grey,
+    backgroundColor: colors.card,
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 16,
+    boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
+    elevation: 3,
     borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
-    marginVertical: 8,
-    width: '100%',
-    boxShadow: '0px 2px 3px rgba(0, 0, 0, 0.1)',
-    elevation: 2,
+    borderColor: colors.border,
   },
-  icon: {
-    width: 60,
-    height: 60,
-    tintColor: "white",
+  carCard: {
+    backgroundColor: colors.card,
+    borderRadius: 16,
+    marginBottom: 20,
+    overflow: 'hidden',
+    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+    elevation: 4,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  center: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
+  },
+  backButton: {
+    padding: 8,
+    marginRight: 12,
+  },
+  headerTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: colors.text,
+    flex: 1,
   },
 });
